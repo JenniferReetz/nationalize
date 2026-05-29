@@ -9,15 +9,35 @@ form.addEventListener('submit', function(event) {
 async function buscarNome(nome) {
     const resultado = document.getElementById('resultado');
     const url = `https://api.nationalize.io/?name=${nome}`;
+
     try {
+
         const resposta = await fetch(url);
         const dados = await resposta.json();
+
         if (dados.country.length === 0) {
+
             resultado.innerText = "Nenhum resultado encontrado.";
             return;
+
         }
-        const pais = dados.country[0].country_id;
+
+        const siglaPais = dados.country[0].country_id;
         const probabilidade = (dados.country[0].probability * 100).toFixed(2);
+
+        // forma do javascript
+        const pais = new Intl.DisplayNames(
+            ['pt-BR'],
+            { type: 'region' }
+        ).of(siglaPais);
+        
+
+        //outra api,para transformar em nome normal
+        // const respostaPais = await fetch(`https://restcountries.com/v3.1/alpha/${siglaPais}`);
+
+        // const dadosPais = await respostaPais.json();
+        // const pais = dadosPais[0].name.common;
+
 
         resultado.innerText =
             `País mais provável: ${pais} (${probabilidade}%)`;
