@@ -1,5 +1,169 @@
+/* Importa a fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Página inteira */
 body{
-    font-family: 'Courier New', Courier, monospace;
-    background-color:rgb(0, 0, 0);
-    color: aliceblue;
+    
+    /* Remove margem padrão */
+    margin: 0;
+
+    /* Remove espaçamento padrão */
+    padding: 0;
+
+    /* Define a fonte */
+    font-family: 'Arial', sans-serif;
+
+    /* Cor de fundo */
+    background-color: #ffffff;
+
+    /* Ativa flexbox */
+    display: flex;
+
+    /* Centraliza horizontalmente */
+    justify-content: center;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* Altura da tela inteira */
+    height: 100vh;
+
+    /* Cor do texto */
+    color: white;
+}
+
+/* Card principal */
+.container{
+
+    /* Cor do card */
+    background: #1e293b;
+
+    /* Espaço interno */
+    padding: 35px;
+
+    /* Bordas arredondadas */
+    border-radius: 18px;
+
+    /* Sombra */
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+
+    /* Centraliza textos */
+    text-align: center;
+
+    /* Largura */
+    width: 350px;
+}
+
+/* Título */
+h1{
+
+    /* Espaço embaixo */
+    margin-bottom: 20px;
+
+    /* Tamanho da fonte */
+    font-size: 28px;
+}
+
+/* Input */
+input{
+
+    /* Largura total */
+    width: 100%;
+
+    /* Espaço interno */
+    padding: 12px;
+
+    /* Bordas arredondadas */
+    border-radius: 10px;
+
+    /* Borda */
+    border: 1px solid #334155;
+
+    /* Fundo */
+    background: #0f172a;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Remove contorno */
+    outline: none;
+
+    /* Tamanho da fonte */
+    font-size: 16px;
+
+    /* Espaço embaixo */
+    margin-bottom: 15px;
+
+    /* Corrige tamanho */
+    box-sizing: border-box;
+
+    /* Animação suave */
+    transition: 0.3s;
+}
+
+/* Quando clicar no input */
+input:focus{
+
+    /* Cor da borda */
+    border-color: #3b82f6;
+
+    /* Sombra azul */
+    box-shadow: 0 0 10px #3b82f650;
+}
+
+/* Botão */
+button{
+
+    /* Largura total */
+    width: 100%;
+
+    /* Espaço interno */
+    padding: 12px;
+
+    /* Remove borda */
+    border: none;
+
+    /* Bordas arredondadas */
+    border-radius: 10px;
+
+    /* Cor do botão */
+    background: #3b82f6;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Tamanho da fonte */
+    font-size: 16px;
+
+    /* Texto mais grosso */
+    font-weight: bold;
+
+    /* Mãozinha ao passar mouse */
+    cursor: pointer;
+
+    /* Animação suave */
+    transition: 0.3s;
+}
+
+/* Hover do botão */
+button:hover{
+
+    /* Cor mais escura */
+    background: #2563eb;
+
+    /* Aumenta levemente */
+    transform: scale(1.03);
+}
+
+/* Resultado da API */
+#resultado{
+
+    /* Espaço em cima */
+    margin-top: 20px;
+
+    /* Tamanho da fonte */
+    font-size: 20px;
+
+    /* Texto mais grosso */
+    font-weight: 600;
 }
