@@ -25,11 +25,18 @@ async function buscarNome(nome) {
         const siglaPais = dados.country[0].country_id;
         const probabilidade = (dados.country[0].probability * 100).toFixed(2);
 
-        //outra api,para transformar em nome normal
-        const respostaPais = await fetch(`https://restcountries.com/v3.1/alpha/${siglaPais}`);
+        // forma do javascript
+        const pais = new Intl.DisplayNames(
+            ['pt-BR'],
+            { type: 'region' }
+        ).of(siglaPais);
+        
 
-        const dadosPais = await respostaPais.json();
-        const pais = dadosPais[0].name.common;
+        //outra api,para transformar em nome normal
+        // const respostaPais = await fetch(`https://restcountries.com/v3.1/alpha/${siglaPais}`);
+
+        // const dadosPais = await respostaPais.json();
+        // const pais = dadosPais[0].name.common;
 
 
         resultado.innerText =
