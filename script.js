@@ -3,11 +3,12 @@ const inputNome = document.getElementById('nome');
 const resultado = document.getElementById('resultado');
 const botao = document.getElementById('botao');
 
-const nome = inputNome.value.trim();
 
 inputNome.addEventListener('keyup', validarCampo)
 
 function validarCampo() {
+    
+const nome = inputNome.value.trim();
 
     resultado.classList.remove('erro');
     inputNome.classList.remove('input-erro');
@@ -17,19 +18,21 @@ function validarCampo() {
         return;
     }
 
-    // if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
-    //     resultado.innerText = 'Digite apenas letras.';
-    //     resultado.classList.add('erro');
-    //     input.classList.add('input-erro');
-    //     botao.disabled = true;
-    //     return;
-    // }
+     if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
+         resultado.innerText = 'Digite apenas letras.';
+         resultado.classList.add('erro');
+         input.classList.add('input-erro');
+         botao.disabled = true;
+         return;
+     }
 
     botao.disabled = false;
 }
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
+    
+const nome = inputNome.value.trim();
 
     buscarNome(nome);
 });
