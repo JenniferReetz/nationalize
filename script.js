@@ -1,10 +1,40 @@
 const form = document.getElementById('meuForm');
+const inputNome = document.getElementById('nome');
+const resultado = document.getElementById('resultado');
+const botao = document.getElementById('botao');
+
+const nome = inputNome.value.trim();
+
+inputNome.addEventListener('keyup', validarCampo)
+
+function validarCampo() {
+
+    resultado.classList.remove('erro');
+    inputNome.classList.remove('input-erro');
+
+    if (nome === '') {
+        botao.disabled = true;
+        return;
+    }
+
+    // if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
+    //     resultado.innerText = 'Digite apenas letras.';
+    //     resultado.classList.add('erro');
+    //     input.classList.add('input-erro');
+    //     botao.disabled = true;
+    //     return;
+    // }
+
+    botao.disabled = false;
+}
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const nome = document.getElementById('nome').value;
+
     buscarNome(nome);
 });
+ 
+
 
 async function buscarNome(nome) {
     const resultado = document.getElementById('resultado');

@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1>Descubra a nacionalidade de um nome</h1>
     <form id="meuForm">
-        <input type="text" id="nome" placeholder="Digite um nome">
-        <button type="submit">Buscar</button>
+
+        <label for="nome">Digite um nome</label>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Ex: Maria"
+            maxlength="15"
+        >
+
+        <button 
+            type="submit"
+            id="botao" 
+            disabled
+         >Buscar</button>
+
     </form>
-    <p id="resultado"></p>
+    <section id="resultado"></section>
     <script src="script.js"></script>
 </body>
 </html>
