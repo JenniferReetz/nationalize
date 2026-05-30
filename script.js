@@ -21,10 +21,11 @@ const nome = inputNome.value.trim();
      if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
          resultado.innerText = 'Digite apenas letras.';
          resultado.classList.add('erro');
-         input.classList.add('input-erro');
+         inputNome.classList.add('input-erro');
          botao.disabled = true;
          return;
      }
+     resultado.innerText = '';
 
     botao.disabled = false;
 }
@@ -54,6 +55,7 @@ async function buscarNome(nome) {
             return;
 
         }
+        resultado.innerText = '';
 
         const siglaPais = dados.country[0].country_id;
         const probabilidade = (dados.country[0].probability * 100).toFixed(2);
@@ -79,4 +81,5 @@ async function buscarNome(nome) {
         resultado.innerText = "Erro ao buscar dados.";
         console.error(erro);
     }
+
 }

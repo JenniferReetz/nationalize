@@ -36,7 +36,7 @@ body{
 .container{
 
     /* Cor do card */
-    background: #003791;
+    background: #ffffff;
 
     /* Espaço interno */
     padding: 35px;
@@ -45,7 +45,7 @@ body{
     border-radius: 18px;
 
     /* Sombra */
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 
     /* Centraliza textos */
     text-align: center;
@@ -58,7 +58,7 @@ body{
 .formulario{
 
     /* Borda */
-    border: 2px solid #39d8a8;
+    border: 2px solid #301cdd;
 
     /* Espaço interno */
     padding: 20px;
@@ -70,10 +70,10 @@ body{
     margin-top: 20px;
 
     /* Fundo */
-    background-color: #00235a;
+    background-color: #ffffff;
 
     /* Sombra */
-    box-shadow: 0 0 15px rgba(57, 216, 168, 0.4);
+    box-shadow: 0 0 15px rgba(45, 55, 230, 0.4);
 }
 
 /* Título */
@@ -99,13 +99,13 @@ input{
     border-radius: 10px;
 
     /* Borda */
-    border: 1px solid #39d8a8;
+    border: 1px solid #00235a;
 
     /* Fundo */
-    background: #000000;
+    background: #ffffff;
 
     /* Cor do texto */
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 
     /* Remove contorno */
     outline: none;
@@ -126,11 +126,11 @@ input{
 /* Quando clicar no input */
 input:focus{
 
-    /* Cor da borda */
-    border-color: #00235a;
+    /* Cor da borda 
+    border-color: #00235a;*/
 
     /* Sombra azul */
-    box-shadow: 0 0 20px #3b82f650;
+    box-shadow: 0 0 20px #0b275550;
 }
 
 /* Classe de erro do input */
