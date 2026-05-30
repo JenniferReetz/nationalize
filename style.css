@@ -14,7 +14,7 @@ body{
     font-family: 'Arial', sans-serif;
 
     /* Cor de fundo */
-    background-color: #ffffff;
+    background-color: #9e9e9e;
 
     /* Ativa flexbox */
     display: flex;
@@ -29,14 +29,14 @@ body{
     height: 100vh;
 
     /* Cor do texto */
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Card principal */
 .container{
 
     /* Cor do card */
-    background: #1e293b;
+    background: #003791;
 
     /* Espaço interno */
     padding: 35px;
@@ -52,6 +52,28 @@ body{
 
     /* Largura */
     width: 350px;
+}
+
+/* Caixa do formulário */
+.formulario{
+
+    /* Borda */
+    border: 2px solid #39d8a8;
+
+    /* Espaço interno */
+    padding: 20px;
+
+    /* Bordas arredondadas */
+    border-radius: 15px;
+
+    /* Espaço em cima */
+    margin-top: 20px;
+
+    /* Fundo */
+    background-color: #00235a;
+
+    /* Sombra */
+    box-shadow: 0 0 15px rgba(57, 216, 168, 0.4);
 }
 
 /* Título */
@@ -77,13 +99,13 @@ input{
     border-radius: 10px;
 
     /* Borda */
-    border: 1px solid #334155;
+    border: 1px solid #39d8a8;
 
     /* Fundo */
-    background: #0f172a;
+    background: #000000;
 
     /* Cor do texto */
-    color: white;
+    color: rgb(255, 255, 255);
 
     /* Remove contorno */
     outline: none;
@@ -105,10 +127,17 @@ input{
 input:focus{
 
     /* Cor da borda */
-    border-color: #3b82f6;
+    border-color: #00235a;
 
     /* Sombra azul */
-    box-shadow: 0 0 10px #3b82f650;
+    box-shadow: 0 0 20px #3b82f650;
+}
+
+/* Classe de erro do input */
+.input-erro{
+
+    /* Borda vermelha */
+    border: 2px solid red;
 }
 
 /* Botão */
@@ -127,7 +156,7 @@ button{
     border-radius: 10px;
 
     /* Cor do botão */
-    background: #3b82f6;
+    background: #000000;
 
     /* Cor do texto */
     color: white;
@@ -149,10 +178,20 @@ button{
 button:hover{
 
     /* Cor mais escura */
-    background: #2563eb;
+    background: #011747;
 
     /* Aumenta levemente */
     transform: scale(1.03);
+}
+
+/* Botão desativado */
+button:disabled{
+
+    /* Cor cinza */
+    background-color: gray;
+
+    /* Cursor bloqueado */
+    cursor: not-allowed;
 }
 
 /* Resultado da API */
@@ -166,4 +205,14 @@ button:hover{
 
     /* Texto mais grosso */
     font-weight: 600;
+}
+
+/* Classe de erro */
+.erro{
+
+    /* Texto vermelho */
+    color: red;
+
+    /* Espaço em cima */
+    margin-top: 10px;
 }
