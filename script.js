@@ -7,9 +7,9 @@ const botao = document.getElementById('botao');
 inputNome.addEventListener('keyup', validarCampo)
 
 function validarCampo() {
-    // trim tira os espaços do início e do fim do texto
+    // tira os espaços do início e do fim do texto
     const nome = inputNome.value.trim();
-    // remove os estilos de erro antes de validar novamente
+
     resultado.classList.remove('erro');
     inputNome.classList.remove('input-erro');
 
@@ -17,8 +17,8 @@ function validarCampo() {
         botao.disabled = true;
         return;
     }
-    // regex q verifica se o nome só tem letras
-    if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
+    // regex q verifica se o nome só tem letras, 
+    if (!/^[A-Za-zÀ-ÿ]+$/.test(nome)) {
          resultado.innerText = 'Digite apenas letras.';
          resultado.classList.add('erro');
          inputNome.classList.add('input-erro');
