@@ -1,225 +1,182 @@
-/* Importa a fonte do Google */
+/* Importa uma fonte externa do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Página inteira */
+
+/* TAG body: representa o corpo inteiro da página */
 body{
-    
-    /* Remove margem padrão */
-    margin: 0;
+    margin: 0; /* Remove a margem padrão */
 
-    /* Remove espaçamento padrão */
-    padding: 0;
+    padding: 0; /* Remove o espaçamento interno padrão */
 
-    /* Define a fonte */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Define a fonte */
 
-    /* Cor de fundo */
-    background-color: #9e9e9e;
+    background-color: #9e9e9e; /* Cor de fundo */
 
-    /* Ativa flexbox */
-    display: flex;
+    display: flex; /* Ativa o Flexbox */
 
-    /* Centraliza horizontalmente */
-    justify-content: center;
+    justify-content: center; /* Centraliza na horizontal */
 
-    /* Centraliza verticalmente */
-    align-items: center;
+    align-items: center; /* Centraliza na vertical */
 
-    /* Altura da tela inteira */
-    height: 100vh;
+    height: 100vh; /* Ocupa a altura inteira da tela */
 
-    /* Cor do texto */
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /* Cor do texto */
+
 }
 
-/* Card principal */
+
+/* CLASSE .container: card principal da tela */
 .container{
+    background: #ffffff; /* Cor de fundo do card */
 
-    /* Cor do card */
-    background: #ffffff;
+    padding: 35px; /* Espaçamento interno */
 
-    /* Espaço interno */
-    padding: 35px;
+    border-radius: 18px; /* Arredonda as bordas */
 
-    /* Bordas arredondadas */
-    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* Sombra */
 
-    /* Sombra */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    text-align: center; /* Centraliza o texto */
 
-    /* Centraliza textos */
-    text-align: center;
+    width: 350px; /* Largura fixa */
 
-    /* Largura */
-    width: 350px;
 }
 
+
+/* TAG label: texto acima do input */
 label{
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: block; /* Faz o label ocupar uma linha inteira */
+
+    margin-top: 10px; /* Espaço acima */
+
+    margin-bottom: 10px; /* Espaço abaixo */
+
 }
 
-/* Caixa do formulário */
+
+/* CLASSE .formulario: caixa onde ficam label, input e botão */
 .formulario{
+    border: 2px solid #a5a5b4; /* Borda da caixa */
 
-    /* Borda */
-    border: 2px solid #a5a5b4;
+    padding: 20px; /* Espaçamento interno */
 
-    /* Espaço interno */
-    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
 
-    /* Bordas arredondadas */
-    border-radius: 15px;
+    margin-top: 20px; /* Espaço acima */
 
-    /* Espaço em cima */
-    margin-top: 20px;
+    background-color: #ffffff; /* Fundo branco */
 
-    /* Fundo */
-    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(169, 170, 163, 0.4); /* Sombra */
 
-    /* Sombra */
-    box-shadow: 0 0 15px rgba(169, 170, 163, 0.4);
-    
 }
 
-/* Título */
+
+/* TAG h1: título principal */
 h1{
+    margin-bottom: 20px; /* Espaço abaixo */
 
-    /* Espaço embaixo */
-    margin-bottom: 20px;
+    font-size: 28px; /* Tamanho da fonte */
 
-    /* Tamanho da fonte */
-    font-size: 28px;
 }
 
-/* Input */
+
+/* TAG input: campo onde o usuário digita */
 input{
+    width: 100%; /* Ocupa toda a largura */
 
-    /* Largura total */
-    width: 100%;
+    padding: 12px; /* Espaçamento interno */
 
-    /* Espaço interno */
-    padding: 12px;
+    border-radius: 10px; /* Bordas arredondadas */
 
-    /* Bordas arredondadas */
-    border-radius: 10px;
+    border: 1px solid #00235a; /* Borda azul */
 
-    /* Borda */
-    border: 1px solid #00235a;
+    background: #ffffff; /* Fundo branco */
 
-    /* Fundo */
-    background: #ffffff;
+    color: rgb(0, 0, 0); /* Cor do texto */
 
-    /* Cor do texto */
-    color: rgb(0, 0, 0);
+    outline: none; /* Remove contorno padrão */
 
-    /* Remove contorno */
-    outline: none;
+    font-size: 16px; /* Tamanho da letra */
 
-    /* Tamanho da fonte */
-    font-size: 16px;
+    margin-bottom: 15px; /* Espaço abaixo */
 
-    /* Espaço embaixo */
-    margin-bottom: 15px;
+    box-sizing: border-box; /* Corrige o tamanho total */
 
-    /* Corrige tamanho */
-    box-sizing: border-box;
+    transition: 0.3s; /* Animação suave */
 
-    /* Animação suave */
-    transition: 0.3s;
 }
 
-/* Quando clicar no input */
+
+/* PSEUDOCLASSE input:focus: quando o usuário clica no input */
 input:focus{
+    box-shadow: 0 0 20px #0b275550; /* Sombra ao clicar */
 
-    /* Cor da borda 
-    border-color: #00235a;*/
-
-    /* Sombra azul */
-    box-shadow: 0 0 20px #0b275550;
 }
 
-/* Classe de erro do input */
+
+/* CLASSE .input-erro: usada quando o input estiver com erro */
 .input-erro{
-
-    /* Borda vermelha */
-    border: 2px solid red;
+    border: 2px solid red; /* Borda vermelha */
 }
 
-/* Botão */
+
+/* TAG button: botão da página */
 button{
+    width: 100%; /* Ocupa toda a largura */
 
-    /* Largura total */
-    width: 100%;
+    padding: 12px; /* Espaçamento interno */
 
-    /* Espaço interno */
-    padding: 12px;
+    border: none; /* Remove a borda */
 
-    /* Remove borda */
-    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
 
-    /* Bordas arredondadas */
-    border-radius: 10px;
+    background: #000000; /* Cor do botão */
 
-    /* Cor do botão */
-    background: #000000;
+    color: white; /* Cor do texto */
 
-    /* Cor do texto */
-    color: white;
+    font-size: 16px; /* Tamanho da letra */
 
-    /* Tamanho da fonte */
-    font-size: 16px;
+    font-weight: bold; /* Texto em negrito */
 
-    /* Texto mais grosso */
-    font-weight: bold;
+    cursor: pointer; /* Mãozinha do mouse */
 
-    /* Mãozinha ao passar mouse */
-    cursor: pointer;
+    transition: 0.3s; /* Animação suave */
 
-    /* Animação suave */
-    transition: 0.3s;
 }
 
-/* Hover do botão */
+
+/* PSEUDOCLASSE button:hover: quando passa o mouse no botão */
 button:hover{
+    background: #011747; /* Muda a cor */
 
-    /* Cor mais escura */
-    background: #011747;
+    transform: scale(1.03); /* Aumenta levemente */
 
-    /* Aumenta levemente */
-    transform: scale(1.03);
 }
 
-/* Botão desativado */
+
+/* PSEUDOCLASSE button:disabled: botão desativado */
 button:disabled{
+    background-color: gray; /* Cor cinza */
 
-    /* Cor cinza */
-    background-color: gray;
+    cursor: not-allowed; /* Cursor de bloqueado */
 
-    /* Cursor bloqueado */
-    cursor: not-allowed;
 }
 
-/* Resultado da API */
+
+/* ID #resultado: local onde aparece o resultado da API */
 #resultado{
+    margin-top: 20px; /* Espaço acima */
 
-    /* Espaço em cima */
-    margin-top: 20px;
+    font-size: 20px; /* Tamanho da fonte */
 
-    /* Tamanho da fonte */
-    font-size: 20px;
+    font-weight: 600; /* Texto mais grosso */
 
-    /* Texto mais grosso */
-    font-weight: 600;
 }
 
-/* Classe de erro */
+
+/* CLASSE .erro: mensagem de erro */
 .erro{
+    color: red; /* Texto vermelho */
 
-    /* Texto vermelho */
-    color: red;
+    margin-top: 10px; /* Espaço acima */
 
-    /* Espaço em cima */
-    margin-top: 10px;
 }
