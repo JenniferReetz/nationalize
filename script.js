@@ -49,7 +49,7 @@ async function buscarNome(nome) {
         // buscar os dados
         const resposta = await fetch(url);
         const dados = await resposta.json();
-
+        // country seria uma lista[]
         if (dados.country.length === 0) {
 
             resultado.innerText = "Nenhum resultado encontrado.";
@@ -57,9 +57,9 @@ async function buscarNome(nome) {
 
         }
         resultado.innerText = '';
-        // busca o primeiro índice da lista do json, que é o país com maior probabilidade
+        // busca o primeiro índice da lista do json
         const siglaPais = dados.country[0].country_id;
-        // formata a probabilidade, com duas casas decimais e vezes 100 para porcentagem
+        // formata a probabilidade
         const probabilidade = (dados.country[0].probability * 100).toFixed(2);
 
         // forma do javascript
