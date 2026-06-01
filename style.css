@@ -54,11 +54,17 @@ body{
     width: 350px;
 }
 
+label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Caixa do formulário */
 .formulario{
 
     /* Borda */
-    border: 2px solid #301cdd;
+    border: 2px solid #a5a5b4;
 
     /* Espaço interno */
     padding: 20px;
@@ -73,7 +79,8 @@ body{
     background-color: #ffffff;
 
     /* Sombra */
-    box-shadow: 0 0 15px rgba(45, 55, 230, 0.4);
+    box-shadow: 0 0 15px rgba(169, 170, 163, 0.4);
+    
 }
 
 /* Título */
