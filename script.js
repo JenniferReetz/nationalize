@@ -17,7 +17,7 @@ function validarCampo() {
         botao.disabled = true;
         return;
     }
-    // regex q verifica se o nome só tem letras, 
+    // regex q verifica se o nome só tem letras, minúsculas e com acento
     if (!/^[A-Za-zÀ-ÿ]+$/.test(nome)) {
          resultado.innerText = 'Digite apenas letras.';
          resultado.classList.add('erro');
