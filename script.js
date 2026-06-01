@@ -7,8 +7,9 @@ const botao = document.getElementById('botao');
 inputNome.addEventListener('keyup', validarCampo)
 
 function validarCampo() {
+    // trim tira os espaços do início e do fim do texto
     const nome = inputNome.value.trim();
-
+    // remove os estilos de erro antes de validar novamente
     resultado.classList.remove('erro');
     inputNome.classList.remove('input-erro');
 
@@ -16,7 +17,7 @@ function validarCampo() {
         botao.disabled = true;
         return;
     }
-
+    // regex q verifica se o nome só tem letras
     if (!/^[A-Za-zÀ-ÿ\s]+$/.test(nome)) {
          resultado.innerText = 'Digite apenas letras.';
          resultado.classList.add('erro');
@@ -31,7 +32,8 @@ function validarCampo() {
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    
+    // remove novamente os espaços antes de enviar para a API,
+    // pois o trim da função validarCampo() não altera o valor original do input
     const nome = inputNome.value.trim();
 
     buscarNome(nome);
@@ -44,7 +46,7 @@ async function buscarNome(nome) {
     const url = `https://api.nationalize.io/?name=${nome}`;
 
     try {
-
+        // buscar os dados
         const resposta = await fetch(url);
         const dados = await resposta.json();
 
@@ -55,8 +57,9 @@ async function buscarNome(nome) {
 
         }
         resultado.innerText = '';
-
+        // busca o primeiro índice da lista do json, que é o país com maior probabilidade
         const siglaPais = dados.country[0].country_id;
+        // formata a probabilidade, com duas casas decimais e vezes 100 para porcentagem
         const probabilidade = (dados.country[0].probability * 100).toFixed(2);
 
         // forma do javascript
